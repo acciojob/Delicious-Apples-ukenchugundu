@@ -1,6 +1,5 @@
-/* --- Global Reset --- */
 body {
-    background-color: #1ae18c; /* Vibrant green background */
+    background-color: #1ae18c;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,19 +8,16 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-/* --- Main Card Layout --- */
 .product {
     display: flex;
     background-color: #fff;
     padding: 3rem;
-    width: 700px;
+    width: 720px;
     border-radius: 8px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    /* Allow the photo-container to hang outside the box */
     overflow: visible; 
 }
 
-/* --- Left Side: Photo Container --- */
 .product__photo {
     flex: 1;
     position: relative;
@@ -29,10 +25,10 @@ body {
 
 .photo-container {
     position: absolute;
-    top: -5rem; /* Pops it above the white card */
-    left: -4.5rem; /* Pops it to the left */
+    top: -5rem;
+    left: -4.5rem;
     width: 280px;
-    height: 110%;
+    height: 115%;
     background: linear-gradient(135deg, #b3f542 0%, #82d400 100%);
     border-radius: 6px;
     box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
@@ -45,7 +41,6 @@ body {
     display: flex;
     justify-content: space-between;
     color: #fff;
-    font-size: 1.2rem;
 }
 
 .photo-main img {
@@ -70,28 +65,22 @@ body {
     width: 45px;
     height: 45px;
     object-fit: contain;
-    border: 1px solid #eee;
-    cursor: pointer;
 }
 
-/* --- Right Side: Details --- */
 .product__info {
     flex: 1;
-    padding-left: 6rem; /* Creates room for the overlapping image */
+    padding-left: 6rem;
 }
 
 .title h1 {
     margin: 0;
     color: #444;
-    font-size: 1.6rem;
-    font-weight: 700;
+    font-size: 1.5rem;
 }
 
 .title span {
     color: #bbb;
-    font-size: 0.75rem;
-    display: block;
-    margin-top: 4px;
+    font-size: 0.7rem;
 }
 
 .price {
@@ -101,14 +90,13 @@ body {
 }
 
 .price span {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 500;
 }
 
 .variant h3, .description h3 {
     font-size: 0.75rem;
     color: #aaa;
-    letter-spacing: 1px;
     margin-bottom: 10px;
 }
 
@@ -116,45 +104,32 @@ body {
     display: flex;
     list-style: none;
     padding: 0;
-    gap: 12px;
+    gap: 10px;
 }
 
 .variant img {
     width: 25px;
-    height: 25px;
     border: 1px solid #ccc;
     border-radius: 50%;
-    padding: 3px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.variant img:hover {
-    transform: scale(1.1);
+    padding: 2px;
 }
 
 .description ul {
     font-size: 0.8rem;
     color: #666;
     padding-left: 1rem;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
-/* --- Button --- */
 .add-to-cart {
     background-color: #ff4d4d;
     color: white;
     border: none;
     padding: 1rem;
-    font-weight: 700;
+    font-weight: bold;
     border-radius: 6px;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     cursor: pointer;
     box-shadow: 0 8px 15px rgba(255, 77, 77, 0.3);
-    transition: background 0.3s;
-}
-
-.add-to-cart:hover {
-    background-color: #e64040;
 }
