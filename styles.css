@@ -1,7 +1,6 @@
-/* your code here */
-/* --- Global Reset & Background --- */
+/* --- Global Reset --- */
 body {
-    background-color: #1ae18c; /* The bright green background */
+    background-color: #1ae18c; /* Vibrant green background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,86 +9,89 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-/* --- Main White Card --- */
+/* --- Main Card Layout --- */
 .product {
     display: flex;
     background-color: #fff;
-    padding: 2.5rem;
-    max-width: 750px;
-    border-radius: 5px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    /* Allow the photo-container to hang outside the box */
+    overflow: visible; 
 }
 
-/* --- Left Side: Images --- */
+/* --- Left Side: Photo Container --- */
 .product__photo {
-    position: relative;
     flex: 1;
+    position: relative;
 }
 
 .photo-container {
     position: absolute;
-    top: -4rem;
-    left: -3.5rem;
-    height: 100%;
-    width: 100%;
+    top: -5rem; /* Pops it above the white card */
+    left: -4.5rem; /* Pops it to the left */
+    width: 280px;
+    height: 110%;
     background: linear-gradient(135deg, #b3f542 0%, #82d400 100%);
-    border-radius: 5px;
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-}
-
-.photo-main {
-    position: relative;
 }
 
 .photo-main .controls {
     display: flex;
     justify-content: space-between;
     color: #fff;
-    cursor: pointer;
+    font-size: 1.2rem;
 }
 
 .photo-main img {
-    width: 100%;
-    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
-    margin-top: 1rem;
+    width: 110%;
+    filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.3));
+    margin-top: 1.5rem;
+    margin-left: -5%;
 }
 
 .photo-album ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style: none;
     padding: 0;
-    margin-top: auto; /* Pushes to bottom of green box */
+    margin-top: auto;
     background: #fff;
-    border-radius: 3px;
+    border-radius: 4px;
     padding: 0.5rem;
 }
 
 .photo-album img {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     object-fit: contain;
+    border: 1px solid #eee;
     cursor: pointer;
 }
 
 /* --- Right Side: Details --- */
 .product__info {
     flex: 1;
-    padding-left: 5rem; /* Space for the overlapping image */
+    padding-left: 6rem; /* Creates room for the overlapping image */
 }
 
 .title h1 {
     margin: 0;
     color: #444;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
 .title span {
     color: #bbb;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    display: block;
+    margin-top: 4px;
 }
 
 .price {
@@ -99,57 +101,60 @@ body {
 }
 
 .price span {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 2.8rem;
+    font-weight: 500;
 }
 
-.variant h3 {
-    font-size: 0.8rem;
+.variant h3, .description h3 {
+    font-size: 0.75rem;
     color: #aaa;
-    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
 .variant ul {
     display: flex;
     list-style: none;
     padding: 0;
-    gap: 10px;
+    gap: 12px;
 }
 
 .variant img {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ddd;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ccc;
     border-radius: 50%;
-    padding: 2px;
+    padding: 3px;
     cursor: pointer;
+    transition: transform 0.2s;
 }
 
-/* --- Missing HTML Elements --- */
-/* Your HTML is missing the Benefits list and Button. 
-   Add these inside .description if you want them to show up */
-
-.description h3 {
-    font-size: 0.8rem;
-    color: #aaa;
+.variant img:hover {
+    transform: scale(1.1);
 }
 
 .description ul {
-    font-size: 0.85rem;
-    color: #555;
-    padding-left: 1.2rem;
-    line-height: 1.6;
+    font-size: 0.8rem;
+    color: #666;
+    padding-left: 1rem;
+    line-height: 1.8;
 }
 
-button {
+/* --- Button --- */
+.add-to-cart {
     background-color: #ff4d4d;
     color: white;
     border: none;
-    padding: 1rem 2rem;
-    font-weight: bold;
-    border-radius: 5px;
+    padding: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4);
+    box-shadow: 0 8px 15px rgba(255, 77, 77, 0.3);
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #e64040;
 }
