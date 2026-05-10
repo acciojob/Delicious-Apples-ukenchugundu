@@ -1,1 +1,155 @@
 /* your code here */
+/* --- Global Reset & Background --- */
+body {
+    background-color: #1ae18c; /* The bright green background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* --- Main White Card --- */
+.product {
+    display: flex;
+    background-color: #fff;
+    padding: 2.5rem;
+    max-width: 750px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Left Side: Images --- */
+.product__photo {
+    position: relative;
+    flex: 1;
+}
+
+.photo-container {
+    position: absolute;
+    top: -4rem;
+    left: -3.5rem;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, #b3f542 0%, #82d400 100%);
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-main {
+    position: relative;
+}
+
+.photo-main .controls {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    cursor: pointer;
+}
+
+.photo-main img {
+    width: 100%;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+    margin-top: 1rem;
+}
+
+.photo-album ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin-top: auto; /* Pushes to bottom of green box */
+    background: #fff;
+    border-radius: 3px;
+    padding: 0.5rem;
+}
+
+.photo-album img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+/* --- Right Side: Details --- */
+.product__info {
+    flex: 1;
+    padding-left: 5rem; /* Space for the overlapping image */
+}
+
+.title h1 {
+    margin: 0;
+    color: #444;
+    font-size: 1.8rem;
+}
+
+.title span {
+    color: #bbb;
+    font-size: 0.8rem;
+}
+
+.price {
+    margin: 1.5rem 0;
+    color: #ff4d4d;
+    font-size: 1.2rem;
+}
+
+.price span {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.variant h3 {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+}
+
+.variant ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+}
+
+.variant img {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 2px;
+    cursor: pointer;
+}
+
+/* --- Missing HTML Elements --- */
+/* Your HTML is missing the Benefits list and Button. 
+   Add these inside .description if you want them to show up */
+
+.description h3 {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.description ul {
+    font-size: 0.85rem;
+    color: #555;
+    padding-left: 1.2rem;
+    line-height: 1.6;
+}
+
+button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4);
+}
