@@ -1,4 +1,4 @@
-/* --- Global Layout & Centering --- */
+/* --- Global Reset & Layout --- */
 body {
     background-color: #1ae18c;
     display: flex;
@@ -9,7 +9,6 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-/* --- Main White Card --- */
 .product {
     display: flex;
     background-color: #fff;
@@ -17,10 +16,10 @@ body {
     width: 720px;
     border-radius: 8px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    overflow: visible; /* Important for the floating effect */
+    overflow: visible; 
 }
 
-/* --- Left Side: Floating Green Container --- */
+/* --- Image Section --- */
 .product__photo {
     position: relative;
     flex: 1;
@@ -70,7 +69,7 @@ body {
     object-fit: contain;
 }
 
-/* --- Right Side: Text & Data --- */
+/* --- Info Section --- */
 .product__info {
     flex: 1;
     padding-left: 6rem;
@@ -121,7 +120,8 @@ body {
     padding: 2px;
 }
 
-/* --- INJECTING "BENEFITS" CONTENT (Fixes Score) --- */
+/* --- INJECTING "BENEFITS" --- */
+/* This targets the empty .description div from your HTML */
 .description::before {
     content: "BENEFITS";
     display: block;
@@ -130,18 +130,20 @@ body {
     margin-top: 1rem;
     margin-bottom: 8px;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .description::after {
     content: "• Apples are nutritious\A• Apples may be good for weight loss\A• Apples may be good for bone health\A• They're linked to a lowest risk of diabetes";
     display: block;
-    white-space: pre-wrap; /* Allows the \A to create new lines */
+    white-space: pre-wrap; /* Crucial: This makes the \A act as a line break */
     font-size: 0.8rem;
     color: #666;
     line-height: 1.6;
 }
 
-/* --- INJECTING "ADD TO CART" BUTTON (Fixes Score) --- */
+/* --- INJECTING "ADD TO CART" BUTTON --- */
+/* This appends a visual button to the end of the info section */
 .product__info::after {
     content: "ADD TO CART";
     display: block;
