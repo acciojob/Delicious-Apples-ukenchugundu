@@ -5,17 +5,16 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family: sans-serif;
 }
 
 .product {
     display: flex;
     background-color: #fff;
     padding: 3rem;
-    width: 720px;
-    border-radius: 8px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    overflow: visible; 
+    width: 750px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .product__photo {
@@ -26,45 +25,34 @@ body {
 .photo-container {
     position: absolute;
     top: -5rem;
-    left: -4.5rem;
+    left: -4rem;
     width: 280px;
-    height: 115%;
+    height: 110%;
     background: linear-gradient(135deg, #b3f542 0%, #82d400 100%);
-    border-radius: 6px;
-    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
-    padding: 1.5rem;
+    border-radius: 8px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.photo-main .controls {
-    display: flex;
-    justify-content: space-between;
-    color: #fff;
-}
-
 .photo-main img {
-    width: 110%;
-    filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.3));
-    margin-top: 1.5rem;
-    margin-left: -5%;
+    width: 100%;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+    margin-top: 20px;
 }
 
 .photo-album ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    padding: 0;
-    margin-top: auto;
+    padding: 10px;
     background: #fff;
-    border-radius: 4px;
-    padding: 0.5rem;
+    margin-top: auto;
+    border-radius: 5px;
 }
 
 .photo-album img {
     width: 45px;
-    height: 45px;
-    object-fit: contain;
 }
 
 .product__info {
@@ -72,32 +60,14 @@ body {
     padding-left: 6rem;
 }
 
-.title h1 {
-    margin: 0;
-    color: #444;
-    font-size: 1.5rem;
-}
-
-.title span {
-    color: #bbb;
-    font-size: 0.7rem;
-}
-
 .price {
-    margin: 1.5rem 0;
     color: #ff4d4d;
-    font-size: 1.2rem;
+    margin: 20px 0;
 }
 
 .price span {
     font-size: 2.5rem;
-    font-weight: 500;
-}
-
-.variant h3, .description h3 {
-    font-size: 0.75rem;
-    color: #aaa;
-    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .variant ul {
@@ -108,28 +78,25 @@ body {
 }
 
 .variant img {
-    width: 25px;
-    border: 1px solid #ccc;
+    width: 30px;
     border-radius: 50%;
+    border: 1px solid #ddd;
     padding: 2px;
 }
 
 .description ul {
-    font-size: 0.8rem;
-    color: #666;
-    padding-left: 1rem;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .add-to-cart {
     background-color: #ff4d4d;
     color: white;
     border: none;
-    padding: 1rem;
-    font-weight: bold;
-    border-radius: 6px;
+    padding: 15px;
     width: 100%;
-    margin-top: 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 8px 15px rgba(255, 77, 77, 0.3);
+    margin-top: 10px;
 }
